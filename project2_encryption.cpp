@@ -1,26 +1,13 @@
+// Ivan Nieto
+// 4/18/19.
 //
-//  project2_encryption.cpp
-//  
-//
-//  Created by Ivan on 4/18/19.
-//
-// Compile with
-//       g++ project2_encryption.cpp -L/usr/local/ssl/lib -lssl -lcrypto
-//
+
 
 #include <stdio.h>
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-
-
-#include <openssl/rsa.h>
-#include <openssl/pem.h>
-#include <openssl/err.h>
-#include <openssl/ssl.h>
-#include <openssl/evp.h>
-#include <openssl/bio.h>
-#include <openssl/bn.h>
+#include <string.h>
 
 
 using namespace std;
@@ -93,7 +80,8 @@ int main(int argc, char *argv[]){
     //Calling openssl command to sign the sec.enc file with the provided private key
     // and saving the new signed file in sec.signed.txt
     system(cmd);
-    cout << "Signing sec.enc and storing signed version in new file called sec.signed.enc\n\n";
+    cout << "Signing sec.enc and storing signed version in new file called ";
+    cout << "sec.signed.enc\n" << endl;;
 
     
     
