@@ -1,0 +1,15 @@
+The program project2_encryption.cpp takes as command line parameters the encrypted message
+file, a public key, and a private key in this order. an example of this would be 
+	./a.out symm_key.bin pubkey.pem private.pem
+
+The program project2_decrypt.cpp takes as command like parameters the signed file from the
+previous program called sec.signed.base64.enc. This file is made when calling the openssl
+commands from the program and thus should not change in name. The second command line 
+argument is the corresponding public key to the private key that was provided to the 
+project2_encrypt.cpp program. The final command line argument is the symmetric key file
+that was produced from the project2_encrypt.cpp program. This file is also created when 
+calling the openssl command from the program and thus should not change in name. An example
+of the expected command line parameters for the program is 
+	./a.out sec.signed.base64.enc public.pem symmetric.txt
+
+To compile both programs simply type make and the makefile will compile and run both programs. 
